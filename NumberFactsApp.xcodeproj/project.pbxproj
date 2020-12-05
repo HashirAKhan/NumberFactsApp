@@ -14,6 +14,11 @@
 		75C9EF87257A2784004C8FEF /* NumberFactsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75C9EF85257A2784004C8FEF /* NumberFactsApp.xcdatamodeld */; };
 		75C9EF89257A2786004C8FEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C9EF88257A2786004C8FEF /* Assets.xcassets */; };
 		75C9EF8C257A2786004C8FEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C9EF8A257A2786004C8FEF /* LaunchScreen.storyboard */; };
+		75C9EF9D257A56C1004C8FEF /* Fact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C9EF9B257A56C1004C8FEF /* Fact+CoreDataClass.swift */; };
+		75C9EF9E257A56C1004C8FEF /* Fact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C9EF9C257A56C1004C8FEF /* Fact+CoreDataProperties.swift */; };
+		75C9EFAD257A5E6D004C8FEF /* SavedScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C9EFAC257A5E6D004C8FEF /* SavedScreenView.swift */; };
+		75C9EFB7257A75C9004C8FEF /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C9EFB6257A75C9004C8FEF /* SettingsScreen.swift */; };
+		75C9EFBB257A8380004C8FEF /* Bloop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 75C9EFBA257A8380004C8FEF /* Bloop.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		75C9EF88257A2786004C8FEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75C9EF8B257A2786004C8FEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75C9EF8D257A2786004C8FEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75C9EF9B257A56C1004C8FEF /* Fact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fact+CoreDataClass.swift"; sourceTree = "<group>"; };
+		75C9EF9C257A56C1004C8FEF /* Fact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fact+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		75C9EFAC257A5E6D004C8FEF /* SavedScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedScreenView.swift; sourceTree = "<group>"; };
+		75C9EFB6257A75C9004C8FEF /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		75C9EFBA257A8380004C8FEF /* Bloop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bloop.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +52,7 @@
 		75C9EF70257A2784004C8FEF = {
 			isa = PBXGroup;
 			children = (
+				75C9EFA0257A56C9004C8FEF /* Module */,
 				75C9EF7B257A2784004C8FEF /* NumberFactsApp */,
 				75C9EF7A257A2784004C8FEF /* Products */,
 			);
@@ -58,9 +69,10 @@
 		75C9EF7B257A2784004C8FEF /* NumberFactsApp */ = {
 			isa = PBXGroup;
 			children = (
+				75C9EFB9257A8364004C8FEF /* Asset */,
+				75C9EF98257A530C004C8FEF /* Views */,
 				75C9EF7C257A2784004C8FEF /* AppDelegate.swift */,
 				75C9EF7E257A2784004C8FEF /* SceneDelegate.swift */,
-				75C9EF80257A2784004C8FEF /* ViewController.swift */,
 				75C9EF82257A2784004C8FEF /* Main.storyboard */,
 				75C9EF88257A2786004C8FEF /* Assets.xcassets */,
 				75C9EF8A257A2786004C8FEF /* LaunchScreen.storyboard */,
@@ -68,6 +80,33 @@
 				75C9EF85257A2784004C8FEF /* NumberFactsApp.xcdatamodeld */,
 			);
 			path = NumberFactsApp;
+			sourceTree = "<group>";
+		};
+		75C9EF98257A530C004C8FEF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				75C9EF80257A2784004C8FEF /* ViewController.swift */,
+				75C9EFAC257A5E6D004C8FEF /* SavedScreenView.swift */,
+				75C9EFB6257A75C9004C8FEF /* SettingsScreen.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		75C9EFA0257A56C9004C8FEF /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				75C9EF9B257A56C1004C8FEF /* Fact+CoreDataClass.swift */,
+				75C9EF9C257A56C1004C8FEF /* Fact+CoreDataProperties.swift */,
+			);
+			name = Module;
+			sourceTree = "<group>";
+		};
+		75C9EFB9257A8364004C8FEF /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				75C9EFBA257A8380004C8FEF /* Bloop.mp3 */,
+			);
+			name = Asset;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +168,7 @@
 			files = (
 				75C9EF8C257A2786004C8FEF /* LaunchScreen.storyboard in Resources */,
 				75C9EF89257A2786004C8FEF /* Assets.xcassets in Resources */,
+				75C9EFBB257A8380004C8FEF /* Bloop.mp3 in Resources */,
 				75C9EF84257A2784004C8FEF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,8 +180,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75C9EFB7257A75C9004C8FEF /* SettingsScreen.swift in Sources */,
+				75C9EFAD257A5E6D004C8FEF /* SavedScreenView.swift in Sources */,
+				75C9EF9D257A56C1004C8FEF /* Fact+CoreDataClass.swift in Sources */,
 				75C9EF81257A2784004C8FEF /* ViewController.swift in Sources */,
 				75C9EF7D257A2784004C8FEF /* AppDelegate.swift in Sources */,
+				75C9EF9E257A56C1004C8FEF /* Fact+CoreDataProperties.swift in Sources */,
 				75C9EF87257A2784004C8FEF /* NumberFactsApp.xcdatamodeld in Sources */,
 				75C9EF7F257A2784004C8FEF /* SceneDelegate.swift in Sources */,
 			);
