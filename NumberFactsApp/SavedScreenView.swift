@@ -15,7 +15,7 @@ class SavedScreenView: UIViewController {
     var items:[Fact]?
     var filtered:[Fact] = []
     
-    
+    //Outlets
     @IBOutlet weak var triviaButton: UIButton!
     @IBOutlet weak var yearButton: UIButton!
     @IBOutlet weak var dateButton: UIButton!
@@ -35,6 +35,7 @@ class SavedScreenView: UIViewController {
         filtered = items!
     }
     
+    //Gets data from Coredata
     func fetchFacts(){
         do{
             self.items = try context.fetch(Fact.fetchRequest())
@@ -136,6 +137,7 @@ class SavedScreenView: UIViewController {
         }
     }
     
+    //updates filtered data
     func updateArray() {
         filtered = []
         if triviaButton.isSelected{

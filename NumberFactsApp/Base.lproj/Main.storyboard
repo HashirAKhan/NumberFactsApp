@@ -259,17 +259,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cdi-nr-08D">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cdi-nr-08D" userLabel="Sound Switch">
                                 <rect key="frame" x="307" y="329" width="51" height="31"/>
+                                <connections>
+                                    <action selector="soundSwitchChange:" destination="mTp-ur-MNB" eventType="valueChanged" id="45U-8B-JnM"/>
+                                </connections>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oNp-3p-i4M">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oNp-3p-i4M" userLabel="Vibration Switch">
                                 <rect key="frame" x="305" y="432.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="vibrationSwitchChange:" destination="mTp-ur-MNB" eventType="valueChanged" id="ppY-1I-vCZ"/>
+                                </connections>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kke-uP-87X">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kke-uP-87X" userLabel="Delete Button">
                                 <rect key="frame" x="319" y="540" width="24" height="26"/>
                                 <state key="normal">
                                     <imageReference key="image" image="trash" catalog="system" symbolScale="large"/>
                                 </state>
+                                <connections>
+                                    <action selector="deleteButtonPress:" destination="mTp-ur-MNB" eventType="touchUpInside" id="gZg-Au-oaH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Vibration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZp-DK-CJa">
                                 <rect key="frame" x="45" y="437.5" width="125" height="21"/>
@@ -298,6 +307,10 @@
                             <constraint firstItem="oZp-DK-CJa" firstAttribute="top" secondItem="XxD-Da-UZc" secondAttribute="bottom" constant="82.5" id="zDk-DT-ywo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="soundSwitch" destination="cdi-nr-08D" id="aU2-ci-yz2"/>
+                        <outlet property="vibrationSwitch" destination="oNp-3p-i4M" id="83G-Rx-jPY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTF-fk-gCL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

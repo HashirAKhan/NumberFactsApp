@@ -19,7 +19,18 @@ struct FactGenre {
     var genre:String
 }
 
+//Class for user defulats
+class UDM {
+    static let shared = UDM()
+    let defaults = UserDefaults(suiteName: "appData")!
+}
+
 class ViewController: UIViewController {
+
+//User Defaults
+    var soundEnabled = true
+    var vibrationEnabled = true
+    
 
 //Class variables
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -57,9 +68,25 @@ class ViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        loadUserSettings()
+    }
     
     
 //Functions
+    
+    //Loads user defualt settings
+    func loadUserSettings(){
+        if let sound = UDM.shared.defaults.value(forKey: "sound") as? Bool {
+            soundEnabled = sound
+        }
+        if let vibration = UDM.shared.defaults.value(forKey: "vibration") as? Bool{
+            vibrationEnabled = vibration
+        }
+
+    }
     
     //Function for selecting a genre
     func genreSelect(index: Int){
@@ -102,6 +129,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //API CALL
     private func getData(urlString:String, completionHandler: @escaping (Response?) ->Void){
         guard let url = URL(string: urlString) else {
             return
@@ -179,6 +207,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func likeFactPress(_ sender: Any) {
+        loadUserSettings()
         let config = UIImage.SymbolConfiguration(scale: .large)
         
         if liked {
@@ -205,22 +234,25 @@ class ViewController: UIViewController {
             catch{
                 print("Error Saving")
             }
-            guard let url = Bundle.main.url(forResource: "Bloop", withExtension: "mp3") else { return }
-            do {
-                    try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
-                    try AVAudioSession.sharedInstance().setActive(true)
+            if soundEnabled{
+                guard let url = Bundle.main.url(forResource: "Bloop", withExtension: "mp3") else { return }
+                do {
+                        try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+                        try AVAudioSession.sharedInstance().setActive(true)
 
-                    player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+                        player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
 
-                    guard let player = player else { return }
+                        guard let player = player else { return }
 
-                    player.play()
+                        player.play()
 
-                } catch let error {
-                    print(error.localizedDescription)
+                    } catch let error {
+                        print(error.localizedDescription)
                 }
-            
-            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+            }
+            if vibrationEnabled{
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+            }
         }
     }
     
