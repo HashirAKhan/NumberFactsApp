@@ -290,19 +290,19 @@
                         <viewLayoutGuide key="safeArea" id="PF9-IE-OP0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kke-uP-87X" firstAttribute="leading" secondItem="4Is-FZ-al0" secondAttribute="trailing" constant="139" id="4Me-6D-Wx0"/>
+                            <constraint firstItem="PF9-IE-OP0" firstAttribute="trailing" secondItem="oNp-3p-i4M" secondAttribute="trailing" constant="60" id="5PC-d1-g0e"/>
                             <constraint firstItem="PF9-IE-OP0" firstAttribute="trailing" secondItem="xHY-qZ-40a" secondAttribute="trailing" constant="73" id="8NT-30-yKR"/>
-                            <constraint firstItem="oNp-3p-i4M" firstAttribute="leading" secondItem="oZp-DK-CJa" secondAttribute="trailing" constant="135" id="Coh-Vc-03l"/>
                             <constraint firstItem="oNp-3p-i4M" firstAttribute="top" secondItem="cdi-nr-08D" secondAttribute="bottom" constant="72.5" id="Dnb-Rj-SAi"/>
                             <constraint firstItem="xHY-qZ-40a" firstAttribute="leading" secondItem="PF9-IE-OP0" secondAttribute="leading" constant="74" id="Fsm-JU-jHx"/>
                             <constraint firstItem="oZp-DK-CJa" firstAttribute="leading" secondItem="PF9-IE-OP0" secondAttribute="leading" constant="45" id="GPO-aE-6Eo"/>
                             <constraint firstItem="XxD-Da-UZc" firstAttribute="leading" secondItem="PF9-IE-OP0" secondAttribute="leading" constant="55" id="OMd-t6-weX"/>
                             <constraint firstItem="xHY-qZ-40a" firstAttribute="top" secondItem="PF9-IE-OP0" secondAttribute="top" constant="70" id="PND-Dj-8j5"/>
+                            <constraint firstItem="PF9-IE-OP0" firstAttribute="trailing" secondItem="cdi-nr-08D" secondAttribute="trailing" constant="58" id="Qbr-GO-c1p"/>
                             <constraint firstItem="oNp-3p-i4M" firstAttribute="centerY" secondItem="o3R-n9-rrV" secondAttribute="centerY" id="VEa-sw-UU5"/>
                             <constraint firstItem="4Is-FZ-al0" firstAttribute="top" secondItem="oZp-DK-CJa" secondAttribute="bottom" constant="82.5" id="bGr-6t-qSQ"/>
                             <constraint firstItem="oZp-DK-CJa" firstAttribute="centerY" secondItem="o3R-n9-rrV" secondAttribute="centerY" id="csB-7H-ZYj"/>
                             <constraint firstItem="4Is-FZ-al0" firstAttribute="leading" secondItem="PF9-IE-OP0" secondAttribute="leading" constant="34" id="kW1-3G-65d"/>
-                            <constraint firstItem="cdi-nr-08D" firstAttribute="leading" secondItem="XxD-Da-UZc" secondAttribute="trailing" constant="147" id="mWM-zR-oxF"/>
+                            <constraint firstItem="PF9-IE-OP0" firstAttribute="trailing" secondItem="kke-uP-87X" secondAttribute="trailing" constant="71" id="kqT-aT-rN4"/>
                             <constraint firstItem="kke-uP-87X" firstAttribute="top" secondItem="oNp-3p-i4M" secondAttribute="bottom" constant="76.5" id="xbh-5s-LOz"/>
                             <constraint firstItem="oZp-DK-CJa" firstAttribute="top" secondItem="XxD-Da-UZc" secondAttribute="bottom" constant="82.5" id="zDk-DT-ywo"/>
                         </constraints>
